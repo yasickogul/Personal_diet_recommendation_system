@@ -1,0 +1,43 @@
+version: "3.9"
+
+services:
+  backend:
+    build:
+      context: ./Django_Backend
+    container_name: diet-backend
+    command: sh -c "python manage.py migrate && python manage.py runserver 0.0.0.0:8000"
+    environment:
+      DB_NAME: pdrs_db
+      DB_USER: root
+      DB_PASSWORD: Mysql123
+      DB_HOST: mysql
+      DB_PORT: "3306"
+    ports:
+      - "8000:8000"
+    depends_on:
+      - mysql
+
+  frontend:
+    build:
+      context: ./React_Frontend
+    container_name: diet-frontend
+    ports:
+      - "5173:5173"
+    depends_on:
+      - backend
+
+  mysql:
+    image: mysql:8.0
+    container_name: diet-mysql
+    restart: unless-stopped
+    environment:
+      MYSQL_DATABASE: pdrs_db
+      MYSQL_ROOT_PASSWORD: Mysql123
+    ports:
+      - "3306:3306"
+    volumes:
+      - mysql_data:/var/lib/mysql
+
+volumes:
+  mysql_data:
+
