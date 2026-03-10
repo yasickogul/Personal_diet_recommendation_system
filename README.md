@@ -26,7 +26,7 @@ The goal is to help users get personalized diet recommendations, track meals, an
 The main dataset used for training / recommendation logic is stored externally to keep the repo light.
 
 - **Download link**:  
-  `https://drive.google.com/file/d/1n8UCXLUebvmkXUeAoBIUmeJm9OvKijLy/view?usp=drive_link`
+  `https://drive.google.com/file/d/1n8UCXLUebvmkXUeAoBIUmeJm9OvKijLy/view?usp=sharing`
 
 After downloading:
 
