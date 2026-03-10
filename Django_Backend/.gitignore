@@ -1,0 +1,31 @@
+__pycache__/
+*.py[cod]
+
+# Django / SQLite database
+*.sqlite3
+db.sqlite3
+
+# Migrations cache (bytecode still covered by *.py[cod])
+*/migrations/__pycache__/
+
+# Local configuration and secrets
+.env
+.env.*
+*.env
+*.env.*
+*.secret
+
+# Collected static and uploaded media
+staticfiles/
+media/
+
+# Virtual environments (if any created here)
+venv/
+env/
+.venv/
+
+# OS / editor junk
+.DS_Store
+.vscode/
+.idea/
+

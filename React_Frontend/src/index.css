@@ -1,0 +1,112 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto,
+    Helvetica, Arial;
+  background: #F8FAFC;
+  color: #1E293B;
+}
+
+/* Page transition animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+}
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Apply page transitions */
+#root > * {
+  animation: fadeIn 0.4s ease-out;
+}
+
+/* Smooth hover animations for buttons */
+button {
+  font-family: inherit;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+button:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+button:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+/* Hover effects for cards */
+[class*="card"], [style*="background"][style*="rgba"] {
+  transition: all 0.3s ease;
+}
+
+/* Hover effects for links and nav items */
+a, [role="button"] {
+  transition: all 0.2s ease;
+}
+
+a:hover, [role="button"]:hover {
+  opacity: 0.8;
+}
+
+/* Input focus animations */
+input, select, textarea {
+  font-family: inherit;
+  transition: all 0.3s ease;
+}
+
+input:focus, select:focus, textarea:focus {
+  transform: scale(1.02);
+  box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.2);
+  border-color: #4F46E5;
+}
+
+/* Glass card hover effect */
+[style*="background"][style*="rgba(255,255,255"]:hover,
+[style*="background"][style*="#FFFFFF"]:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(79, 70, 229, 0.15);
+  border-color: #C7D2FE !important;
+}
+
+/* Smooth scroll */
+html {
+  scroll-behavior: smooth;
+  }
+
+/* Additional hover effects for interactive elements */
+[style*="cursor: pointer"]:hover {
+  opacity: 0.9;
+  }
+
+/* Navbar button hover */
+button[style*="gradient"]:hover:not(:disabled) {
+  background: linear-gradient(135deg, #4F46E5, #6366F1) !important;
+  box-shadow: 0 6px 20px rgba(79, 70, 229, 0.3);
+}

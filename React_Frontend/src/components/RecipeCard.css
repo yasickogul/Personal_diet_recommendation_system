@@ -1,0 +1,105 @@
+.recipe-card {
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  background: rgba(0,0,0,0.2);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.recipe-header {
+  padding: 1rem;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(255,255,255,0.05);
+  border-radius: 8px 8px 0 0;
+}
+
+.recipe-header:hover {
+  background: rgba(255,255,255,0.08);
+}
+
+.recipe-header h3 {
+  margin: 0;
+  color: rgb(0, 0, 0);
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.expand-icon {
+  font-size: 0.8rem;
+  color: rgba(255,255,255,0.6);
+}
+
+.recipe-content {
+  padding: 1.5rem;
+}
+
+.recipe-image {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.recipe-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  max-height: 300px;
+}
+
+.nutrition-section,
+.ingredients-section,
+.instructions-section,
+.time-section {
+  margin-bottom: 1.5rem;
+}
+
+.nutrition-section h4,
+.ingredients-section h4,
+.instructions-section h4,
+.time-section h4 {
+  margin-bottom: 0.5rem;
+  color: rgba(4, 3, 3, 0.9);
+  text-align: center;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.nutrition-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 0.5rem;
+}
+
+.nutrition-table td {
+  padding: 0.5rem;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+  color: rgba(0, 0, 0, 0.8);
+  font-size: 13px;
+}
+
+.nutrition-table td:first-child {
+  font-weight: bold;
+  color: rgba(0, 0, 0, 0.9);
+}
+
+.ingredients-section ul,
+.instructions-section ol {
+  margin-left: 1.5rem;
+  padding-left: 1rem;
+  color: rgba(5, 4, 4, 0.8);
+}
+
+.ingredients-section li,
+.instructions-section li {
+  margin-bottom: 0.5rem;
+  font-size: 13px;
+}
+
+.time-section p {
+  margin: 0.25rem 0;
+  color: rgba(3, 2, 2, 0.8);
+  font-size: 13px;
+}
+
